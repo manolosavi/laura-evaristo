@@ -24,6 +24,7 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	background: #fafafa;
+	min-width: 320px;
 }
 
 ul {
@@ -38,10 +39,7 @@ ul {
 li {
 	text-align: center;
 	width: 150px;
-}
-
-h1, li a {
-	font-family: Chaparral Pro;
+	margin: 10px 0 0;
 }
 
 h1 {
@@ -58,26 +56,28 @@ h2 {
 	font-size: 20px;
 }
 
-h1, h2 {
-	color: #227799;
+h1, h2, h3, a {
+	/*color: #227799;*/
+	color: #e0c106;
+	color: #21548b;
 }
 
 h3 {
 	font-size: 30px;
-	padding: 5px 20px 15px;
+	padding: 50px 20px 0;
 }
 
 h4 {
-	padding: 5px;
+	font-variant: small-caps;
+	padding: 4px 7px;
 	font-size: 22px;
 }
 
 p {
-	padding-bottom: 4px;
+	padding: 0 5px 4px;
 }
 
 a {
-	color: #227799;
 	text-decoration: underline;
 }
 
@@ -86,7 +86,7 @@ a:active {
 	top: 1px;
 }
 
-header, h3, h4, p {
+header, section, h3, h4, p {
 	max-width: 960px;
 	margin: 0 auto;
 }
@@ -103,17 +103,27 @@ nav a {
 	text-decoration: none;
 }
 
+section {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
 img {
 	max-width: 100%;
 	visibility: hidden;
+}
+
+.subsection {
+	padding: 15px 10px;
+	flex-basis: 280px;
 }
 
 #foto1 {
 	background-image: url(../images/foto.jpg);
 	background-size: contain;
 	background-repeat: no-repeat;
-	/*background-origin: content-box;
-	padding: 60px;*/
 }
 
 footer {
