@@ -1,7 +1,12 @@
-/*@font-face {
-	font-family: Seravek;
-	src: url(Seravek.ttc);
-}*/
+@font-face {
+	font-family: Chaparral Pro;
+	src: url('Chaparral Pro.otf');
+}
+
+@font-face {
+	font-family: Khmer MN;
+	src: url('Khmer MN.ttc');
+}
 
 * {
 	border: 0px;
@@ -9,7 +14,7 @@
 	padding: 0px;
 	text-decoration: none;
 	color: #131313;
-	font: 18px Hoefler, Times New Roman;/*Chaparral Pro, Hoefler Text, Hoefler, Mazarin, Khmer MN*/
+	font: 18px Chaparral Pro, Times New Roman;
 	box-sizing: border-box;
 }
 
@@ -35,6 +40,10 @@ li {
 	width: 150px;
 }
 
+h1, li a {
+	font-family: Chaparral Pro;
+}
+
 h1 {
 	text-align: center;
 	font-size: 33px;
@@ -43,6 +52,7 @@ h1 {
 }
 
 h2 {
+	font-family: Khmer MN;
 	text-align: center;
 	text-decoration: overline;
 	font-size: 20px;
@@ -52,12 +62,14 @@ h1, h2 {
 	color: #227799;
 }
 
-h3, h3 a {
-	font-size: 20px;
+h3 {
+	font-size: 30px;
+	padding: 5px 20px 15px;
 }
 
-h3 {
-	padding: 0 50px 10px;
+h4 {
+	padding: 5px;
+	font-size: 22px;
 }
 
 p {
@@ -74,7 +86,7 @@ a:active {
 	top: 1px;
 }
 
-header, p {
+header, h3, h4, p {
 	max-width: 960px;
 	margin: 0 auto;
 }
