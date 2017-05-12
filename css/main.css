@@ -150,7 +150,8 @@ img {
 }
 
 #rsvp a {
-	padding: 0;
+	padding: 8px 8px 2px;
+	outline: 1px solid #21548b;
 }
 
 form {
