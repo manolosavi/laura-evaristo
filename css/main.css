@@ -13,7 +13,7 @@
 	margin: 0px;
 	padding: 0px;
 	text-decoration: none;
-	color: #131313;
+	color: #2a2a2a;
 	font: 18px Chaparral Pro, Times New Roman;
 	box-sizing: border-box;
 }
@@ -56,17 +56,17 @@ h2, h2 a {
 	font-size: 20px;
 }
 
-h1, h2, h3, a {
-	color: #21548b;
-}
-
 h1 a, h2 a, h3 a {
 	text-decoration: none;
 }
 
 h3, h3 a {
 	font-size: 30px;
-	padding: 50px 20px 0;
+	padding: 20px 20px 0;
+}
+
+h3, h4 {
+	color: #131313;
 }
 
 h4 {
@@ -105,11 +105,21 @@ nav a {
 	text-decoration: none;
 }
 
+.border {
+	outline: 1px solid #21548b;
+	outline-offset: -10px;
+	width: 100%;
+}
+
 section {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	flex-wrap: wrap;
+}
+
+.spacer {
+	height: 30px;
 }
 
 img {
