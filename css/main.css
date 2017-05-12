@@ -42,14 +42,14 @@ li {
 	margin: 10px 0 0;
 }
 
-h1 {
+h1, h1 a {
 	text-align: center;
 	font-size: 33px;
 	line-height: 33px;
 	padding-top: 30px;
 }
 
-h2 {
+h2, h2 a {
 	font-family: Khmer MN;
 	text-align: center;
 	text-decoration: overline;
@@ -57,12 +57,14 @@ h2 {
 }
 
 h1, h2, h3, a {
-	/*color: #227799;*/
-	color: #e0c106;
 	color: #21548b;
 }
 
-h3 {
+h1 a, h2 a, h3 a {
+	text-decoration: none;
+}
+
+h3, h3 a {
 	font-size: 30px;
 	padding: 50px 20px 0;
 }
@@ -120,10 +122,71 @@ img {
 	flex-basis: 280px;
 }
 
-#foto1 {
-	background-image: url(../images/foto.jpg);
+.photo {
 	background-size: contain;
 	background-repeat: no-repeat;
+}
+
+#photo1 {
+	background-image: url(../images/we_1854.jpg);
+}
+
+#photo2 {
+	background-image: url(../images/we_1855.jpg);
+}
+
+#rsvp {
+	text-align: center;
+}
+
+#rsvp a {
+	padding: 0;
+}
+
+form {
+	width: calc(100% - 60px);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+input, textarea {
+	border-radius: 0;
+	padding: 10px;
+	margin: 10px;
+}
+
+input[type=email], input[type=tel] {
+	flex-grow: 1;
+	flex-basis: 47%;
+}
+
+input[type=text], textarea {
+	flex-grow: 2;
+	flex-basis: 100%;
+}
+
+input {
+	background: rgba(0, 0, 0, 0);
+	border-bottom: 1px solid rgb(169, 170, 169);
+	padding-bottom: 0;
+}
+
+textarea {
+	height: 180px;
+	background-color: rgba(0, 0, 0, .03);
+}
+
+input[type=submit] {
+	border: none;
+	padding: 10px 15px;
+	border-radius: 3px;
+	color: #fafafa;
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%) #21548b;
+	background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%) #21548b;
+	background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%) #21548b;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%) #21548b;
 }
 
 footer {

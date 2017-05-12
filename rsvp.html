@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel='stylesheet' href='css/main.css'>
+	
+	<title>Laura &amp; Evaristo</title>
+</head>
+
+<body>
+	<header>
+		<h1><a href="index.html">Laura &amp; Evaristo</a></h1>
+		<h2><a href="index.html">18 Noviembre 2017</a></h2>
+		<nav>
+			<ul>
+				<li><a href="index.html#itinerario">Itinerario</a></li>
+				<li><a href="index.html#hoteles">Hoteles</a></li>
+				<li><a href="index.html#restaurantes">Restaurantes</a></li>
+				<li><a href="index.html#regalos">Mesa de Regalos</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<h3 id="rsvp">RSVP</h3>
+		<section>
+			<form id="contact-form" action="https://formspree.io/laura_urquijo_@hotmail.com" method="post">
+				<input type="text" name="_gotcha" style="display:none">
+				<input type="hidden" name="_next" value="https://laurayevaristo.com/index.html?thanks=true" />
+				<input type="hidden" name="_subject" value="RSVP - Laura y Evaristo">
+
+				<input type="text" name="Nombre" placeholder="Nombre*" required>
+				<input type="email" name="Email" placeholder="Email*" required>
+				<input type="tel" name="Teléfono" placeholder="Teléfono*" required>
+				<input type="text" name="Asistir" placeholder="Podrás asistir?*" required>
+				<input type="text" name="Acompañantes" placeholder="Quién viene contigo?*" required>
+				<textarea name="Mensaje" placeholder="Mensaje"></textarea>
+
+				<input class="submit" type="submit" value="Enviar">
+			</form>
+		</section>
+
+	</main>
+	
+	<footer>
+		<p></p>
+	</footer>
+<script type="text/javascript">
+	var $contactForm = $('#contact-form');
+	$contactForm.submit(function(e) {
+		e.preventDefault();
+		$.ajax({
+			url: 'https://formspree.io/laura_urquijo_@hotmail.com',
+			method: 'POST',
+			data: $(this).serialize(),
+			dataType: 'json',
+			beforeSend: function() {
+				$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+			},
+			success: function(data) {
+				$contactForm.find('.alert--loading').hide();
+				$contactForm.append('<div class="alert alert--success">Message sent!</div>');
+			},
+			error: function(err) {
+				$contactForm.find('.alert--loading').hide();
+				$contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+			}
+		});
+	});
+</script>
+</body>
+</html>
