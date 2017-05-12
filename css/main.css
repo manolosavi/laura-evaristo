@@ -52,8 +52,11 @@ h1, h1 a {
 h2, h2 a {
 	font-family: Khmer MN;
 	text-align: center;
-	text-decoration: overline;
 	font-size: 20px;
+}
+
+h2 a {
+	border-top: 1px solid #21548b;
 }
 
 h1 a, h2 a, h3 a {
@@ -66,6 +69,7 @@ h3, h3 a {
 }
 
 h3, h4 {
+	text-align: center;
 	color: #131313;
 }
 
@@ -111,6 +115,10 @@ nav a {
 	width: 100%;
 }
 
+.spacer {
+	height: 30px;
+}
+
 section {
 	display: flex;
 	flex-direction: row;
@@ -118,8 +126,37 @@ section {
 	flex-wrap: wrap;
 }
 
-.spacer {
-	height: 30px;
+.subsection {
+	padding: 15px 10px;
+	flex-basis: 280px;
+}
+
+#itinerary {
+	/*width: 350px;*/
+	display: flex;
+	flex-direction: column;
+}
+
+table {
+	margin: 0 auto;
+	width: 300px;
+}
+
+#itinerary .subsection {
+	padding: 15px 10px;
+	flex-basis: auto;
+}
+
+#itinerary .subsection h4 {
+	text-align: center;
+}
+
+.attire {
+	text-align: right;
+}
+
+.subsection a {
+	/*text-align: center;*/
 }
 
 img {
@@ -127,14 +164,19 @@ img {
 	visibility: hidden;
 }
 
-.subsection {
-	padding: 15px 10px;
-	flex-basis: 280px;
+a img {
+	max-width: 100%;
+	visibility: inherit;
 }
 
 .photo {
 	background-size: contain;
 	background-repeat: no-repeat;
+}
+
+a.photo {
+	width: 100px;
+	height: 100px;
 }
 
 #photo1 {
@@ -143,6 +185,18 @@ img {
 
 #photo2 {
 	background-image: url(../images/we_1855.jpg);
+}
+
+#liverpool {
+	background-image: url(../images/liverpool.png);
+}
+
+#palacio {
+	background-image: url(../images/palacio.png);
+}
+
+#cratebarrel {
+	background-image: url(../images/cratebarrel.png);
 }
 
 #rsvp {
